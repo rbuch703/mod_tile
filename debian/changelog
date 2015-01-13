@@ -1,3 +1,10 @@
+libapache2-mod-tile (0.4-26~trusty1) trusty; urgency=low
+  * upgrade to mod_tile git revision c7131e52a0af1365f68057164a934661ddd4a216
+    - adds CORS support to renderd
+    - added missing 'replag' script to package
+
+ -- Robert Buchholz <rbuch703@gmail.com>  Mon, 30 Jun 2014 00:00:00 +0000
+
 libapache2-mod-tile (0.4-12~precise2) precise; urgency=low
   * fixed renderd.conf to use mapnik 2.0 plugins dir
 

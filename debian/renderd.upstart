@@ -1,0 +1,21 @@
+# renderd - the Mapnik render deamon
+#
+# The renderd daemon provides a socket for other application to schedule 
+# Mapnik rendering requests. It is usually used in conjunction with an 
+# OpenStreetMap rendering service and thus with the Apache mod mod_tile
+
+description	"renderd"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+console log
+
+respawn
+
+pre-start script
+    mkdir -p /var/run/renderd
+    chown www-data:www-data /var/run/renderd
+end script
+
+exec su -s /bin/sh -c "renderd -f" www-data
